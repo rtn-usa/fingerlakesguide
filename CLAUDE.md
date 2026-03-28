@@ -90,9 +90,51 @@ This land has been attracting people who are paying close attention for ten thou
 
 ---
 
-## Guide Structure
+## Guide Architecture
 
-### Chapter Template (nine sections, matching Cayuga)
+Three layers, each building on the one above:
+
+### Layer 1: Regional Landing Page (complete)
+
+Hero narrative, at a glance, why come here, drive times, seasonal windows. Lives in `FingerLakes_Guide_v1.docx`.
+
+### Layer 2: Lake Chapters (geographic spine)
+
+| Lake | Anchor Towns |
+|---|---|
+| **Cayuga** (complete) | Ithaca, Auburn, Seneca Falls |
+| **Seneca** | Geneva, Watkins Glen, Lodi |
+| **Keuka** | Hammondsport, Penn Yan, Bluff Pt |
+| **Canandaigua** | Canandaigua, Naples, Bristol |
+| **Eastern Lakes** | Skaneateles |
+
+Each chapter contains: Anchor identity, Key towns, Wine/beverage, Heritage, Farm and food, Outdoor, Lodging, Practical.
+
+### Layer 3: Badge Tracks (thematic, cut across all lake chapters)
+
+Collection pages and trail descriptions that span the geographic chapters:
+
+| Track | Scope |
+|---|---|
+| **Wine trails** | Seneca, Cayuga, Keuka, Canandaigua |
+| **Heritage Trail** | 169 operators tagged, all counties |
+| **Farm Trail** | 67 operators tagged, all counties |
+| **Craft Beverage Trail** | 61 operators (breweries, distilleries, cideries) |
+| **Phase 2 (decide)** | Finger Lakes Table, Finger Lakes Outdoors |
+
+### Recommended Build Sequence
+
+| Step | Deliverable | Notes |
+|---|---|---|
+| 1 | Regional landing page | Complete. Uses research brief directly. |
+| 2 | Cayuga Lake chapter | Complete. Strongest heritage + wine trail DMO targets. |
+| 3 | Seneca Lake chapter | Biggest wine region, FLTA territory. |
+| 4 | Badge track copy | Collection pages + trail descriptions. Can parallel with step 3. |
+| 5 | Keuka, Canandaigua, Eastern Lakes | Complete the geographic spine. |
+
+---
+
+## Chapter Template (nine sections, matching Cayuga)
 
 1. **The lake, and what it keeps producing** — anchor identity. Lead with people and stories, not geography.
 2. **At a glance** — stats table
@@ -104,14 +146,12 @@ This land has been attracting people who are paying close attention for ten thou
 8. **Where to stay** — independently owned preferred, each property gets a character note
 9. **Getting here and getting around** — drive times, route notes, seasonal hours, passport check-ins
 
-### Chapters to Build
+### Chapter Key Anchors
 
-| Chapter | Key Anchors |
-|---|---|
-| **Seneca Lake** | Wine country spine, Watkins Glen gorge trail, Geneva, Dr. Frank's origin story at Hammondsport, Catherine's Town and the Sullivan march (western shore), Seneca Nation (Onödowa'ga:') territory |
-| **Keuka Lake** | Wine origin story (Bostwick's 1829 planting), Hammondsport, Bluff Point, Dr. Frank's Vinifera Wine Cellars (1962), Penn Yan, Y-shape geography |
-| **Canandaigua Lake** | Western wine country, Canandaigua town and lakefront, Naples valley, Bristol Mountain, Treaty of Canandaigua (1794), Haudenosaunee land rights context |
-| **Eastern Lakes** | Skaneateles (clearest lake, Syracuse's drinking water, no wine trail identity), Owasco (Auburn's lake, Ward O'Hara Agricultural Museum), Honeoye, Canadice, Hemlock, Conesus |
+- **Seneca Lake:** Wine country spine, Watkins Glen gorge trail, Geneva, Dr. Frank's origin story at Hammondsport, Catherine's Town and the Sullivan march (western shore), Seneca Nation (Onödowa'ga:') territory
+- **Keuka Lake:** Wine origin story (Bostwick's 1829 planting), Hammondsport, Bluff Point, Dr. Frank's Vinifera Wine Cellars (1962), Penn Yan, Y-shape geography
+- **Canandaigua Lake:** Western wine country, Canandaigua town and lakefront, Naples valley, Bristol Mountain, Treaty of Canandaigua (1794), Haudenosaunee land rights context
+- **Eastern Lakes:** Skaneateles (clearest lake, Syracuse's drinking water, no wine trail identity), Owasco (Auburn's lake, Ward O'Hara Agricultural Museum), Honeoye, Canadice, Hemlock, Conesus
 
 ### Itineraries to Write
 
@@ -273,7 +313,9 @@ Run every check before marking any content task complete.
 
 ---
 
-## Chapter Writing Sequence
+## Writing Workflow
+
+Follow the build sequence in "Guide Architecture" above (Seneca next, then badge tracks, then remaining lakes).
 
 ### For Each Lake Chapter
 
@@ -291,6 +333,14 @@ Run every check before marking any content task complete.
 3. Calculate drive times. Flag any segment over 45 minutes.
 4. Write the narrative. Answer the spine question: what does this route reveal that another route wouldn't?
 5. Update `guide_listings.json` for every named stop.
+
+### For Each Badge Track (Layer 3)
+
+1. Identify all tagged operators across counties from `fl_listings_tagged.json`.
+2. Write the collection page: trail identity, what ties these operators together, how to run the trail.
+3. Write individual trail descriptions following the same voice rules as lake chapters.
+4. Cross-reference lake chapters to avoid duplicating narrative, but link back.
+5. Update `guide_listings.json` for any operators not already captured by lake chapters.
 
 ---
 
